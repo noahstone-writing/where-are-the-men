@@ -293,6 +293,21 @@ sup{font-size:.7em}
   au.addEventListener('play',function(){label(true);});
   au.addEventListener('pause',function(){label(false);});
   au.addEventListener('ended',function(){label(false);});
+  /* OS media player (lock screen / Now Playing): title + "Noah Stone" + cover art */
+  if('mediaSession' in navigator){
+    try{
+      navigator.mediaSession.metadata=new MediaMetadata({
+        title:(document.title||'').split(':')[0].trim(),
+        artist:'Noah Stone',
+        album:'4:1 and Counting',
+        artwork:[{src:'audio-cover.png',sizes:'1024x1024',type:'image/png'}]
+      });
+    }catch(e){}
+    navigator.mediaSession.setActionHandler('play',function(){au.play();});
+    navigator.mediaSession.setActionHandler('pause',function(){au.pause();});
+    navigator.mediaSession.setActionHandler('seekbackward',function(d){au.currentTime=Math.max(0,au.currentTime-((d&&d.seekOffset)||10));});
+    navigator.mediaSession.setActionHandler('seekforward',function(d){au.currentTime=Math.min(au.duration||1e9,au.currentTime+((d&&d.seekOffset)||10));});
+  }
 })();
 </script>
 </body>
