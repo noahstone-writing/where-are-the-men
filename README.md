@@ -395,7 +395,7 @@ Zwemer's 1911 lament has hardened into a settled demographic structure: a missio
 
 ## Notes
 
-1. Initial research relied partly on search-index extraction because several agency websites (including imb.org, omf.org, sim.org, team.org, frontiersusa.org, and crossworld.org) restrict automated retrieval. An independent re-verification in July 2026 subsequently confirmed nearly all quotations verbatim against live pages, Internet Archive snapshots, or primary PDFs, and recovered the corrected publication dates used above. Remaining caveats: SIM's "Q&A: Singleness in Missions" is no longer live at its original URL and is cited from an Internet Archive snapshot of April 25, 2025; the Missio Nexus 2021 figures are cited through Zurlo (2025) because the underlying report is member-gated; and the print sources (Zwemer 1911; Robert 1997; Wilson 1979) and the Hudson Taylor "most powerful agency" attribution should be checked against the original volumes. One widely circulated figure (that 53 percent of actively churched young men versus 42 percent of young women would consider a missions career) could not be traced to any primary source and has been excluded (§5, §11). The Erickson (1989) figures are cited from secondary reproductions and from the survey's citation in Piper and Grudem (1991); the original *Fundamentalist Journal* pages (the run is held in Liberty University's digital archive) should be consulted before final citation, as should the live texts of A Life Overseas (2022), Beautiful Kingdom Builders (2016), Anyabwile (2011), and Clark (2023), which restrict automated retrieval.
+1. Initial research relied partly on search-index extraction because several agency websites (including imb.org, omf.org, sim.org, team.org, frontiersusa.org, and crossworld.org) restrict automated retrieval. An independent re-verification in July 2026 subsequently confirmed nearly all quotations verbatim against live pages, Internet Archive snapshots, or primary PDFs, and recovered the corrected publication dates used above. Remaining caveats: SIM's "Q&A: Singleness in Missions" is no longer live at its original URL and is cited from an Internet Archive snapshot of April 25, 2025; the Missio Nexus 2021 figures are cited through Zurlo (2025) because the underlying report is member-gated; and the print sources (Zwemer 1911; Robert 1997; Wilson 1979) and the Hudson Taylor "most powerful agency" attribution should be checked against the original volumes. One widely circulated figure (that 53 percent of actively churched young men versus 42 percent of young women would consider a missions career) could not be traced to any primary source and has been excluded (§5, §11). The Erickson (1989) figures are cited from secondary reproductions and from the survey's citation in Piper and Grudem (1991); the original *Fundamentalist Journal* pages (the run is held in Liberty University's digital archive) should be consulted before final citation, The A Life Overseas (2022), Beautiful Kingdom Builders (2016), Anyabwile (2011), Clark (2023), OMF Deutschland (2023), and Piper (2016) quotations above were confirmed verbatim against their live pages on July 12, 2026 (correcting the Clark title and the OMF Deutschland episode date in the process).
 
 ---
 
@@ -424,7 +424,7 @@ Baptist Press. 2016. "IMB Taps 5 Megacities for Global Initiative Pilot." https:
 
 Barna Group. 2020. *The Future of Missions: 10 Questions About Global Ministry the Church Must Answer with the Next Generation.* Ventura, CA: Barna Group. Research release: "Young Christians Value Missions." https://www.barna.com/research/young-christians-value-missions/. Accessed July 2026.
 
-Beautiful Kingdom Builders. 2016. "Why Are Women More Eager Missionaries? John Piper's Opinions Miss the Mark." December 28, 2016. https://thebeautifulkingdombuilders.com/2016/12/28/why-are-women-more-eager-missionaries-john-pipers-opinions-miss-the-mark/. Accessed July 2026.
+Beautiful Kingdom Builders. 2016. "Why Are Women More Eager Missionaries? John Piper's Opinions Miss the Mark." By Ruth Perry. December 28, 2016. https://thebeautifulkingdombuilders.com/2016/12/28/why-are-women-more-eager-missionaries-john-pipers-opinions-miss-the-mark/. Accessed July 2026.
 
 Beaver, R. Pierce. 1980. *American Protestant Women in World Mission: History of the First Feminist Movement in North America.* Rev. ed. Grand Rapids: Eerdmans.
 
@@ -440,7 +440,7 @@ Christianity Today. 1992. "Campus Ministries: Standing in the Gender Gap." June 
 
 Christianity Today. 2023. "Hudson Taylor's Legacy and the China Inland Mission." December 2023. https://www.christianitytoday.com/2023/12/hudson-taylor-legacy-china-inland-mission/. Accessed July 2026.
 
-Clark, Elliot. 2023. "There's Still Room for Women in Missions." The Gospel Coalition, December 15, 2023. https://www.thegospelcoalition.org/article/room-women-missions/. Accessed July 2026.
+Clark, Elliot. 2023. "Yes, There's Room for Women in Missions." The Gospel Coalition, December 15, 2023. https://www.thegospelcoalition.org/article/room-women-missions/. Accessed July 2026.
 
 Crossworld. 2017. "Mind the Man Gap." By "Sarah," disciple-maker in East Asia. April 26, 2017. https://crossworld.org/blog/details/mind-the-man-gap. Accessed July 2026.
 
@@ -484,7 +484,7 @@ Missio Nexus. 2025. *Mobilization Report, Volume 4* (2024 data). https://mission
 
 Mission Network News. 2013. "New Statistics on Single Men in Missions." August 16, 2013. https://www.mnnonline.org/news/new-statistics-on-single-men-in-missions/. Accessed July 2026.
 
-OMF Deutschland. 2023. "Männermangel in der Mission: Mann, mach was!" *Mango Radio (Der OMF Ostasien-Podcast)*, April 14, 2023. https://omf.org/de/podcast/maennermangel-in-der-mission-mann-mach-was/. Accessed July 2026.
+OMF Deutschland. 2023. "Männermangel in der Mission: Mann, mach was!" *Mango Radio (Der OMF Ostasien-Podcast)*, April 15, 2023. https://omf.org/de/podcast/maennermangel-in-der-mission-mann-mach-was/. Accessed July 2026.
 
 OMF International. n.d.-a. "Serving Together: Diversity in Unity on Women in Leadership in OMF." *Billions* (OMF UK). https://omf.org/uk/billions/articles/serving-together-diversity-in-unity-on-women-in-leadership-in-omf/. Accessed July 2026.
 
