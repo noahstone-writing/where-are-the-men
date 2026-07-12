@@ -17,29 +17,40 @@
 <meta name="twitter:title" content="4:1 and Counting — Forum Manuscript">
 <meta name="twitter:description" content="Why Single Women Vastly Outnumber Men on the Mission Field">
 <meta name="twitter:image" content="https://noahstone-writing.github.io/where-are-the-men/og-card.png">
+<script>try{var _fs=localStorage.getItem('wam-fs');if(_fs)document.documentElement.style.setProperty('--fs',_fs);}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"></noscript>
 <style>
-:root{--paper:#f5f1e8;--paper-2:#ece3d1;--ink:#211d18;--muted:#7c7161;--accent:#9c3b2e;--rule:#cdbfa6}
+:root{--paper:#f5f1e8;--paper-2:#ece3d1;--ink:#211d18;--muted:#7c7161;--accent:#9c3b2e;--rule:#cdbfa6;--fs:1}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:'Source Sans 3','Segoe UI',system-ui,sans-serif;
-  font-size:clamp(1rem,2.6vw,1.15rem);line-height:1.65;
+  font-size:calc(var(--fs) * clamp(1rem,2.6vw,1.15rem));line-height:1.65;
   overflow-wrap:break-word;word-break:break-word}
 .wrap{max-width:46rem;margin:0 auto;padding:clamp(1.25rem,5vw,3rem)}
 .topbar{border-bottom:2px solid var(--ink);background:rgba(245,241,232,.96);
   position:sticky;top:0;z-index:5}
-.topbar .wrap{padding-top:.85rem;padding-bottom:.85rem;display:flex;
-  justify-content:space-between;align-items:center;gap:1rem}
+.topbar .wrap{padding-top:.7rem;padding-bottom:.7rem;display:flex;flex-wrap:wrap;
+  justify-content:space-between;align-items:center;gap:.4rem 1.2rem}
 .topbar a{color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap}
 .topbar .label{color:var(--muted);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.tb-nav{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem 1.2rem}
+/* text-size control (for readers who need larger type) */
+.fs-control{display:flex;align-items:center;gap:.5rem}
+.fs-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.fs-btn{font-family:'Fraunces',Georgia,serif;line-height:1;border:2px solid var(--rule);
+  background:transparent;color:var(--ink);cursor:pointer;border-radius:4px;
+  padding:.1em .5em;font-weight:600;min-width:2em}
+.fs-btn:hover{border-color:var(--accent)}
+.fs-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.fs-btn.s1{font-size:.85rem}.fs-btn.s2{font-size:1.05rem}.fs-btn.s3{font-size:1.3rem}
 h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.15;text-wrap:balance;font-weight:600}
-h1{font-size:clamp(1.9rem,6vw,3rem);margin:1.1em 0 .4em;letter-spacing:-.01em}
+h1{font-size:calc(var(--fs) * clamp(1.9rem,6vw,3rem));margin:1.1em 0 .4em;letter-spacing:-.01em}
 h1::after{content:"";display:block;width:3rem;height:4px;background:var(--accent);margin:.5rem 0 0}
-h2{font-size:clamp(1.4rem,4.2vw,2rem);margin:1.7em 0 .5em;padding-bottom:.25em;border-bottom:2px solid var(--rule)}
-h3{font-size:clamp(1.15rem,3.4vw,1.45rem);margin:1.4em 0 .4em}
+h2{font-size:calc(var(--fs) * clamp(1.4rem,4.2vw,2rem));margin:1.7em 0 .5em;padding-bottom:.25em;border-bottom:2px solid var(--rule)}
+h3{font-size:calc(var(--fs) * clamp(1.15rem,3.4vw,1.45rem));margin:1.4em 0 .4em}
 p{margin:.9em 0}
 blockquote{margin:1.2em 0;padding:.3em 0 .3em 1.1em;border-left:4px solid var(--accent);
   font-family:'Fraunces',Georgia,serif;font-style:italic;color:#4a4238}
@@ -56,7 +67,15 @@ sup{font-size:.7em}
 </style>
 </head>
 <body>
-<div class="topbar"><div class="wrap"><a href="index.html">&larr; Home</a><span class="label">Forum Manuscript</span><a href="article.html">The journal article &rarr;</a></div></div>
+<div class="topbar"><div class="wrap">
+<nav class="tb-nav"><a href="index.html">&larr; Home</a><span class="label">Forum Manuscript</span><a href="article.html">The journal article &rarr;</a></nav>
+<div class="fs-control" role="group" aria-label="Text size">
+<span class="fs-label">Text size</span>
+<button type="button" class="fs-btn s1" data-fs="1" aria-label="Normal text size">A</button>
+<button type="button" class="fs-btn s2" data-fs="1.2" aria-label="Large text size">A</button>
+<button type="button" class="fs-btn s3" data-fs="1.45" aria-label="Largest text size">A</button>
+</div>
+</div></div>
 <article class="wrap">
 <h1>4:1 and Counting: Why Single Women Vastly Outnumber Men on the Mission Field</h1>
 <p><strong>A Forum Talk for Warm Beach Camp</strong><br />
@@ -210,5 +229,19 @@ sup{font-size:.7em}
 <p><em>Prepared for Warm Beach Camp Forum – July 2026</em></p>
 </article>
 <div class="footer">Warm Beach Camp Forum · July 2026</div>
+<script>
+(function(){
+  var KEY='wam-fs', root=document.documentElement;
+  var btns=[].slice.call(document.querySelectorAll('.fs-btn'));
+  function set(v,save){
+    root.style.setProperty('--fs',v);
+    btns.forEach(function(b){b.classList.toggle('active',b.dataset.fs===v);});
+    if(save){try{localStorage.setItem(KEY,v);}catch(e){}}
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.fs,true);});});
+  var saved; try{saved=localStorage.getItem(KEY);}catch(e){}
+  set(saved||'1',false);
+})();
+</script>
 </body>
 </html>
