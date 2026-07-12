@@ -166,7 +166,7 @@ Body, Chandelle. 2015. “Where Are the Young People in Missions?” SEND Intern
 
 Chitwood, Paul. 2022. “First-Person: Abuse Response…” International Mission Board.
 
-Erickson, Howard. 1989. “Single Missionary Survey.” *Fundamentalist Journal*, January 1989.
+Erickson, Howard. 1989. “Single Missionary Survey.” *Fundamentalist Journal* 8, no. 2 (February 1989): 27.
 
 Hartz, Sarita. 2024. “The Single Missionary: What the Church Should Know.”
 
