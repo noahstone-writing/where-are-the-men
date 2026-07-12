@@ -71,6 +71,11 @@ sup{font-size:.7em}
   padding:.28em .75em;cursor:pointer;white-space:nowrap}
 .listen-btn:hover{filter:brightness(1.06)}
 .listen-btn.playing{background:transparent;color:var(--accent)}
+.speed-btn{font-family:'Source Sans 3',system-ui,sans-serif;font-size:.8rem;font-weight:700;
+  color:var(--ink);background:transparent;border:2px solid var(--rule);border-radius:4px;
+  padding:.28em .55em;cursor:pointer;min-width:3.2em;text-align:center}
+.speed-btn:hover{border-color:var(--accent)}
+.speed-btn.fast{border-color:var(--accent);color:var(--accent)}
 .footer{color:var(--muted);font-size:.85rem;text-align:center;padding:2rem 1rem 3rem;
   border-top:1px solid var(--rule);margin-top:2rem}
 </style>
@@ -79,7 +84,7 @@ sup{font-size:.7em}
 <div class="topbar"><div class="wrap">
 <nav class="tb-nav"><a href="index.html">&larr; Home</a><span class="label">Journal Article</span><a href="manuscript.html">The manuscript &rarr;</a></nav>
 <div class="tb-tools">
-<button type="button" class="listen-btn" id="listen-btn" aria-label="Play narration">&#9654;&nbsp;Listen</button><audio id="narration" preload="none" src="article.mp3"></audio>
+<button type="button" class="listen-btn" id="listen-btn" aria-label="Play narration">&#9654;&nbsp;Listen</button><button type="button" class="speed-btn" id="speed-btn" aria-label="Playback speed">1&#215;</button><audio id="narration" preload="none" src="article.mp3"></audio>
 <div class="fs-control" role="group" aria-label="Text size">
 <span class="fs-label">Text size</span>
 <button type="button" class="fs-btn s1" data-fs="1" aria-label="Normal text size">A</button>
@@ -293,6 +298,17 @@ sup{font-size:.7em}
   au.addEventListener('play',function(){label(true);});
   au.addEventListener('pause',function(){label(false);});
   au.addEventListener('ended',function(){label(false);});
+  /* Playback speed: one button, tap cycles 1x -> 1.25 -> 1.5 -> 1.75 -> 2 -> 1x */
+  var sbtn=document.getElementById('speed-btn');
+  if(sbtn){
+    var rates=[1,1.25,1.5,1.75,2], ri=0, saved=parseFloat(localStorage.getItem('wam-speed'));
+    if(rates.indexOf(saved)>-1) ri=rates.indexOf(saved);
+    function applyRate(){ au.playbackRate=rates[ri]; sbtn.textContent=rates[ri]+'×'; sbtn.classList.toggle('fast',rates[ri]>1); }
+    sbtn.addEventListener('click',function(){ ri=(ri+1)%rates.length; try{localStorage.setItem('wam-speed',rates[ri]);}catch(e){} applyRate(); });
+    au.addEventListener('loadedmetadata',applyRate);
+    au.addEventListener('play',applyRate);
+    applyRate();
+  }
   /* OS media player (lock screen / Now Playing): title + "Noah Stone" + cover art */
   if('mediaSession' in navigator){
     try{
