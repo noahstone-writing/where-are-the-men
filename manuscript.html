@@ -31,7 +31,8 @@ body{margin:0;background:var(--paper);color:var(--ink);
   overflow-wrap:break-word;word-break:break-word}
 .wrap{max-width:46rem;margin:0 auto;padding:clamp(1.25rem,5vw,3rem)}
 .topbar{border-bottom:2px solid var(--ink);background:rgba(245,241,232,.96);
-  position:sticky;top:0;z-index:5}
+  position:sticky;top:0;z-index:5;transition:transform .28s ease}
+.topbar.hide{transform:translateY(-100%)}
 .topbar .wrap{padding-top:.7rem;padding-bottom:.7rem;display:flex;flex-wrap:wrap;
   justify-content:space-between;align-items:center;gap:.4rem 1.2rem}
 .topbar a{color:var(--accent);text-decoration:none;font-weight:700;font-size:.9rem;white-space:nowrap}
@@ -241,6 +242,22 @@ sup{font-size:.7em}
   btns.forEach(function(b){b.addEventListener('click',function(){set(b.dataset.fs,true);});});
   var saved; try{saved=localStorage.getItem(KEY);}catch(e){}
   set(saved||'1',false);
+})();
+/* Hide the sticky header on scroll-down, reveal on scroll-up (reclaims space) */
+(function(){
+  var bar=document.querySelector('.topbar');
+  if(!bar) return;
+  var last=window.scrollY||0, ticking=false;
+  function update(){
+    var y=window.scrollY||0;
+    if(y<=bar.offsetHeight){ bar.classList.remove('hide'); }   // always show near the top
+    else if(y-last>4){ bar.classList.add('hide'); }            // scrolling down
+    else if(last-y>4){ bar.classList.remove('hide'); }         // scrolling up
+    last=y; ticking=false;
+  }
+  window.addEventListener('scroll',function(){
+    if(!ticking){requestAnimationFrame(update);ticking=true;}
+  },{passive:true});
 })();
 </script>
 </body>
