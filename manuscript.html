@@ -63,6 +63,14 @@ th,td{border:1px solid var(--rule);padding:.45em .6em;text-align:left;vertical-a
 th{background:var(--paper-2);font-family:'Fraunces',Georgia,serif}
 ol,ul{padding-left:1.4em}
 sup{font-size:.7em}
+/* header tools: narration play button + text-size control */
+.tb-tools{display:flex;align-items:center;gap:.5rem 1rem;flex-wrap:wrap}
+.listen-btn{display:inline-flex;align-items:center;gap:.4em;
+  font-family:'Source Sans 3',system-ui,sans-serif;font-size:.82rem;font-weight:700;
+  color:#fff;background:var(--accent);border:2px solid var(--accent);border-radius:4px;
+  padding:.28em .75em;cursor:pointer;white-space:nowrap}
+.listen-btn:hover{filter:brightness(1.06)}
+.listen-btn.playing{background:transparent;color:var(--accent)}
 .footer{color:var(--muted);font-size:.85rem;text-align:center;padding:2rem 1rem 3rem;
   border-top:1px solid var(--rule);margin-top:2rem}
 </style>
@@ -70,11 +78,14 @@ sup{font-size:.7em}
 <body>
 <div class="topbar"><div class="wrap">
 <nav class="tb-nav"><a href="index.html">&larr; Home</a><span class="label">Forum Manuscript</span><a href="article.html">The journal article &rarr;</a></nav>
+<div class="tb-tools">
+<button type="button" class="listen-btn" id="listen-btn" aria-label="Play narration">&#9654;&nbsp;Listen</button><audio id="narration" preload="none" src="manuscript.mp3"></audio>
 <div class="fs-control" role="group" aria-label="Text size">
 <span class="fs-label">Text size</span>
 <button type="button" class="fs-btn s1" data-fs="1" aria-label="Normal text size">A</button>
 <button type="button" class="fs-btn s2" data-fs="1.2" aria-label="Large text size">A</button>
 <button type="button" class="fs-btn s3" data-fs="1.45" aria-label="Largest text size">A</button>
+</div>
 </div>
 </div></div>
 <article class="wrap">
@@ -258,6 +269,16 @@ sup{font-size:.7em}
   window.addEventListener('scroll',function(){
     if(!ticking){requestAnimationFrame(update);ticking=true;}
   },{passive:true});
+})();
+/* Narration play/pause toggle in the header */
+(function(){
+  var btn=document.getElementById('listen-btn'), au=document.getElementById('narration');
+  if(!btn||!au) return;
+  function label(p){ btn.innerHTML = p ? '&#10073;&#10073;&nbsp;Pause' : '&#9654;&nbsp;Listen'; btn.classList.toggle('playing',p); }
+  btn.addEventListener('click',function(){ if(au.paused){au.play();}else{au.pause();} });
+  au.addEventListener('play',function(){label(true);});
+  au.addEventListener('pause',function(){label(false);});
+  au.addEventListener('ended',function(){label(false);});
 })();
 </script>
 </body>
